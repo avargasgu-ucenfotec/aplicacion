@@ -3,11 +3,11 @@ public class Usuario {
     //Clase "Usuario" que representa una persona que interactúa con el sistema.
 
     //Atributos
-    private String nombre;          //Nombre completo del usuario.
-    private String correo;          //Correo electrónico del usuario.
-    private String contrasena;      //Contraseña del usuario para ingresar al sistema.
-    private String telefono;        //Número de teléfono del usuario.
-    private String tipo;            //Rol del usuario. Opciones válidas: administrador, estudiante, funcionario.
+    private String nombre;      //Nombre completo del usuario.
+    private String correo;      //Correo electrónico del usuario.
+    private String contrasena;  //Contraseña del usuario para ingresar al sistema.
+    private String telefono;    //Número de teléfono del usuario.
+    private String tipo;        //Rol del usuario. Opciones válidas: administrador, estudiante, funcionario.
 
     //Métodos
     //Constructor

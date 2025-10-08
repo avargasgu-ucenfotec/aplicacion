@@ -3,10 +3,10 @@ public class Departamento {
     //Clase "Departamento" que representa un departamento que gestiona un ticket.
 
     //Atributos
-    private String nombre;          //Nombre del departamento.
-    private String descripcion;     //Descripción breve de las funciones o alcance del departamento.
-    private String correo;          //Correo electrónico del departamento.
-    private String extension;       //Extensión telefónica del departamento.
+    private String nombre;      //Nombre del departamento.
+    private String descripcion; //Descripción breve de las funciones o alcance del departamento.
+    private String correo;      //Correo electrónico del departamento.
+    private String extension;   //Extensión telefónica del departamento.
 
     //Métodos
     //Constructor
@@ -45,15 +45,15 @@ public class Departamento {
     }
 
     public void setDescripcion(String nuevoDescripcion) {
-        this.descripcion = descripcion;
+        this.descripcion = nuevoDescripcion;
     }
 
     public void setCorreo(String nuevoCorreo) {
-        this.correo = correo;
+        this.correo = nuevoCorreo;
     }
 
     public void setExtension(String nuevoExtension) {
-        this.extension = extension;
+        this.extension = nuevoExtension;
     }
 
     //toString()
