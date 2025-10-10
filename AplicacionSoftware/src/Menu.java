@@ -5,12 +5,14 @@ public class Menu {
     //Clase "Menu" que despliega un menú en consola que permite registrar y listar las clases definidas.
 
     //Atributos
-    private boolean estaCorriendo;
+    private boolean estaCorriendo;      //Bandera que indica si el menú está corriendo.
+    private final Database database;    //Datos asociados al sistema y manipulados a través del menú.
 
     //Métodos
     //Constructor
     public Menu() {
         estaCorriendo = true;
+        database = new Database();
     }
 
     //Funcionales
@@ -39,21 +41,55 @@ public class Menu {
         switch (seleccion) {
             case "1":
                 System.out.println("\nRegistrando usuario");
+                System.out.print("Ingrese el nombre del usuario: ");
+                String nombreUsuario = scanner.nextLine();
+                System.out.print("Ingrese el correo del usuario: ");
+                String correoUsuario = scanner.nextLine();
+                System.out.print("Ingrese la contraseña del usuario: ");
+                String contrasenaUsuario = scanner.nextLine();
+                System.out.print("Ingrese el teléfono del usuario: ");
+                String telefonoUsuario = scanner.nextLine();
+                System.out.print("Ingrese el tipo del usuario: ");
+                String tipoUsuario = scanner.nextLine();
+                database.registrarUsuario(nombreUsuario, correoUsuario, contrasenaUsuario, telefonoUsuario, tipoUsuario);
                 break;
             case "2":
                 System.out.println("\nRegistrando departamento");
+                System.out.print("Ingrese el nombre del departamento: ");
+                String nombreDepartamento = scanner.nextLine();
+                System.out.print("Ingrese la descripción del departamento: ");
+                String descripcionDepartamento = scanner.nextLine();
+                System.out.print("Ingrese el correo del departamento: ");
+                String correoDepartamento = scanner.nextLine();
+                System.out.print("Ingrese la extensión del departamento: ");
+                String extensionDepartamento = scanner.nextLine();
+                database.registrarDepartamento(nombreDepartamento, descripcionDepartamento, correoDepartamento, extensionDepartamento);
                 break;
             case "3":
                 System.out.println("\nRegistrando ticket");
+                System.out.print("Ingrese el asunto del ticket: ");
+                String asuntoTicket = scanner.nextLine();
+                System.out.print("Ingrese la descripción del ticket: ");
+                String descripcionTicket = scanner.nextLine();
+                System.out.print("Ingrese el estado del ticket: ");
+                String estadoTicket = scanner.nextLine();
+                System.out.print("Ingrese el nombre del usuario que registra el ticket: ");
+                String usuarioTicket = scanner.nextLine();
+                System.out.print("Ingrese el departamento que maneja el ticket: ");
+                String departamentoTicket = scanner.nextLine();
+                database.registrarTicket(asuntoTicket, descripcionTicket, estadoTicket, usuarioTicket, departamentoTicket);
                 break;
             case "4":
                 System.out.println("\nDesplegando usuarios registrados");
+                database.imprimirListaUsuarios();
                 break;
             case "5":
                 System.out.println("\nDesplegando departamentos registrados");
+                database.imprimirListaDepartamentos();
                 break;
             case "6":
                 System.out.println("\nDesplegando tickets registrados");
+                database.imprimirListaTickets();
                 break;
             case "7":
                 System.out.println("\nSaliendo");
