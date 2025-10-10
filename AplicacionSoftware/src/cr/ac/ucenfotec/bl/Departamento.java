@@ -66,4 +66,9 @@ public class Departamento {
                 "\nExtensión telefónica: " + extension +
                 "\n";
     }
+
+    //equals()
+    public boolean equals(Departamento departamento) {
+        return(nombre.equals(departamento.nombre));
+    }
 }

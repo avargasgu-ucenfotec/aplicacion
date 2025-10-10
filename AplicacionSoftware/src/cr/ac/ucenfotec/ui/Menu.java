@@ -46,7 +46,7 @@ public class Menu {
                 System.out.println("\nRegistrando usuario");
                 System.out.print("Ingrese el nombre del usuario: ");
                 String nombreUsuario = scanner.nextLine();
-                System.out.print("Ingrese el correo del usuario: ");
+                System.out.print("Ingrese el correo electrónico del usuario: ");
                 String correoUsuario = scanner.nextLine();
                 System.out.print("Ingrese la contraseña del usuario: ");
                 String contrasenaUsuario = scanner.nextLine();
@@ -62,7 +62,7 @@ public class Menu {
                 String nombreDepartamento = scanner.nextLine();
                 System.out.print("Ingrese la descripción del departamento: ");
                 String descripcionDepartamento = scanner.nextLine();
-                System.out.print("Ingrese el correo del departamento: ");
+                System.out.print("Ingrese el correo electrónico del departamento: ");
                 String correoDepartamento = scanner.nextLine();
                 System.out.print("Ingrese la extensión del departamento: ");
                 String extensionDepartamento = scanner.nextLine();
