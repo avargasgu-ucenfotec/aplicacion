@@ -3,11 +3,11 @@ public class Ticket {
     //Clase "Ticket" que representa un ticket generado por un usuario y asignado a un departamento.
 
     //Atributos
-    private String asunto;              //Asunto del ticket
-    private String descripcion;         //Descripción de la situación que justifica el registro del ticket.
-    private String estado;              //Estado del ticket. Opciones válidas: nuevo, en progreso, resuelto.
-    private String usuario;             //Nombre del usuario que registra el ticket.
-    private String departamento;        //Nombre del departamento que maneja el ticket.
+    private String asunto;          //Asunto del ticket
+    private String descripcion;     //Descripción de la situación que justifica el registro del ticket.
+    private String estado;          //Estado del ticket. Opciones válidas: nuevo, en progreso, resuelto.
+    private String usuario;         //Nombre del usuario que registra el ticket.
+    private String departamento;    //Nombre del departamento que maneja el ticket.
 
     //Métodos
     //Constructor
