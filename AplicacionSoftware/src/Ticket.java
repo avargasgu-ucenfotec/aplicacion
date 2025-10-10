@@ -6,12 +6,12 @@ public class Ticket {
     private String asunto;              //Asunto del ticket
     private String descripcion;         //Descripción de la situación que justifica el registro del ticket.
     private String estado;              //Estado del ticket. Opciones válidas: nuevo, en progreso, resuelto.
-    private Usuario usuario;            //Usuario que registra el ticket.
-    private Departamento departamento;  //Departamento que maneja el ticket.
+    private String usuario;             //Nombre del usuario que registra el ticket.
+    private String departamento;        //Nombre del departamento que maneja el ticket.
 
     //Métodos
     //Constructor
-    public Ticket(String asunto, String descripcion, String estado, Usuario usuario, Departamento departamento) {
+    public Ticket(String asunto, String descripcion, String estado, String usuario, String departamento) {
         this.asunto = asunto;
         this.descripcion = descripcion;
         this.estado = estado;
@@ -37,11 +37,11 @@ public class Ticket {
         return estado;
     }
 
-    public Usuario getUsuario() {
+    public String getUsuario() {
         return usuario;
     }
 
-    public Departamento getDepartamento() {
+    public String getDepartamento() {
         return departamento;
     }
 
@@ -58,11 +58,11 @@ public class Ticket {
         this.estado = nuevoEstado;
     }
 
-    public void setUsuario(Usuario nuevoUsuario) {
+    public void setUsuario(String nuevoUsuario) {
         this.usuario = nuevoUsuario;
     }
 
-    public void setDepartamento(Departamento nuevoDepartamento) {
+    public void setDepartamento(String nuevoDepartamento) {
         this.departamento = nuevoDepartamento;
     }
 
@@ -71,8 +71,8 @@ public class Ticket {
         return "Asunto: " + asunto +
                 "\nDescripción: " + descripcion +
                 "\nEstado: " + estado +
-                "\nUsuario: " + usuario.getNombre() +
-                "\nDepartamento: " + departamento.getNombre() +
+                "\nUsuario: " + usuario +
+                "\nDepartamento: " + departamento +
                 "\n";
     }
 }
