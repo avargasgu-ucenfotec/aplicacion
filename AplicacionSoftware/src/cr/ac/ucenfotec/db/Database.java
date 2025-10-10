@@ -1,4 +1,7 @@
+package cr.ac.ucenfotec.db;
+
 import java.util.ArrayList;
+import cr.ac.ucenfotec.bl.*;
 
 public class Database {
 

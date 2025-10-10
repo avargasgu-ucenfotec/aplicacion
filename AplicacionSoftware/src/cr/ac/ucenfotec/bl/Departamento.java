@@ -1,3 +1,5 @@
+package cr.ac.ucenfotec.bl;
+
 public class Departamento {
 
     //Clase "Departamento" que representa un departamento que gestiona un ticket.
