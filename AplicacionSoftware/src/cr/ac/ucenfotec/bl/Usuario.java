@@ -1,3 +1,5 @@
+package cr.ac.ucenfotec.bl;
+
 public class Usuario {
 
     //Clase "Usuario" que representa una persona que interactúa con el sistema.

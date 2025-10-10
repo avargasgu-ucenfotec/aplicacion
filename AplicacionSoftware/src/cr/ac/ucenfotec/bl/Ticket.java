@@ -1,3 +1,5 @@
+package cr.ac.ucenfotec.bl;
+
 public class Ticket {
 
     //Clase "Ticket" que representa un ticket generado por un usuario y asignado a un departamento.

@@ -1,4 +1,7 @@
+package cr.ac.ucenfotec.ui;
+
 import java.util.Scanner;
+import cr.ac.ucenfotec.db.*;
 
 public class Menu {
 
