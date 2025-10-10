@@ -5,15 +5,15 @@ public class Ticket {
     //Clase "Ticket" que representa un ticket generado por un usuario y asignado a un departamento.
 
     //Atributos
-    private String asunto;          //Asunto del ticket
-    private String descripcion;     //Descripción de la situación que justifica el registro del ticket.
-    private String estado;          //Estado del ticket. Opciones válidas: nuevo, en progreso, resuelto.
-    private String usuario;         //Nombre del usuario que registra el ticket.
-    private String departamento;    //Nombre del departamento que maneja el ticket.
+    private String asunto;              //Asunto del ticket
+    private String descripcion;         //Descripción de la situación que justifica el registro del ticket.
+    private String estado;              //Estado del ticket. Opciones válidas: nuevo, en progreso, resuelto.
+    private Usuario usuario;            //Nombre del usuario que registra el ticket.
+    private Departamento departamento;  //Nombre del departamento que maneja el ticket.
 
     //Métodos
     //Constructor
-    public Ticket(String asunto, String descripcion, String estado, String usuario, String departamento) {
+    public Ticket(String asunto, String descripcion, String estado, Usuario usuario, Departamento departamento) {
         this.asunto = asunto;
         this.descripcion = descripcion;
         this.estado = estado;
@@ -24,6 +24,7 @@ public class Ticket {
     public Ticket(String asunto, String descripcion) {
         this.asunto = asunto;
         this.descripcion = descripcion;
+        this.estado = "nuevo";
     }
 
     //Getter
@@ -39,11 +40,11 @@ public class Ticket {
         return estado;
     }
 
-    public String getUsuario() {
+    public Usuario getUsuario() {
         return usuario;
     }
 
-    public String getDepartamento() {
+    public Departamento getDepartamento() {
         return departamento;
     }
 
@@ -60,11 +61,11 @@ public class Ticket {
         this.estado = nuevoEstado;
     }
 
-    public void setUsuario(String nuevoUsuario) {
+    public void setUsuario(Usuario nuevoUsuario) {
         this.usuario = nuevoUsuario;
     }
 
-    public void setDepartamento(String nuevoDepartamento) {
+    public void setDepartamento(Departamento nuevoDepartamento) {
         this.departamento = nuevoDepartamento;
     }
 
@@ -73,8 +74,6 @@ public class Ticket {
         return "Asunto: " + asunto +
                 "\nDescripción: " + descripcion +
                 "\nEstado: " + estado +
-                "\nUsuario: " + usuario +
-                "\nDepartamento: " + departamento +
                 "\n";
     }
 }

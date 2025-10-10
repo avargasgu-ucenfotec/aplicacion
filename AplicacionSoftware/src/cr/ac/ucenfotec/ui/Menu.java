@@ -74,13 +74,7 @@ public class Menu {
                 String asuntoTicket = scanner.nextLine();
                 System.out.print("Ingrese la descripción del ticket: ");
                 String descripcionTicket = scanner.nextLine();
-                System.out.print("Ingrese el estado del ticket: ");
-                String estadoTicket = scanner.nextLine();
-                System.out.print("Ingrese el nombre del usuario que registra el ticket: ");
-                String usuarioTicket = scanner.nextLine();
-                System.out.print("Ingrese el departamento que maneja el ticket: ");
-                String departamentoTicket = scanner.nextLine();
-                database.registrarTicket(asuntoTicket, descripcionTicket, estadoTicket, usuarioTicket, departamentoTicket);
+                database.registrarTicket(asuntoTicket, descripcionTicket);
                 break;
             case "4":
                 System.out.println("\nDesplegando usuarios registrados");

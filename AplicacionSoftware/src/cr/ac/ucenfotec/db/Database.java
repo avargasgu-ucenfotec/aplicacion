@@ -65,8 +65,8 @@ public class Database {
         }
     }
 
-    public void registrarTicket(String asunto, String descripcion, String estado, String usuario, String departamento) {
-        Ticket ticket = new Ticket(asunto, descripcion, estado, usuario, departamento);
+    public void registrarTicket(String asunto, String descripcion) {
+        Ticket ticket = new Ticket(asunto, descripcion);
         insertarTicket(ticket);
     }
 
