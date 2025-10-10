@@ -79,4 +79,9 @@ public class Usuario {
                 "\nTipo de usuario: " + tipo +
                 "\n";
     }
+
+    //equals()
+    public boolean equals(Usuario usuario) {
+        return(correo.equals(usuario.correo));
+    }
 }

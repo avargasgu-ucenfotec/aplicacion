@@ -14,7 +14,7 @@ public class Database {
 
     //Métodos
     //Constructor
-    public Database(){
+    public Database() {
         datosUsuario = new ArrayList<>();
         datosDepartamento = new ArrayList<>();
         datosTicket = new ArrayList<>();
@@ -35,12 +35,34 @@ public class Database {
 
     public void registrarUsuario(String nombre, String correo, String contrasena, String telefono, String tipo) {
         Usuario usuario = new Usuario(nombre, correo, contrasena, telefono, tipo);
-        insertarUsuario(usuario);
+        if (estaRepetidoUsuario(usuario)) {
+            System.out.println("""
+                            
+                            Registro no completado.\
+                            
+                            El correo electrónico ingresado ya se encuentra registrado.\
+                            
+                            Intente de nuevo con un correo electrónico distinto.""");
+        } else {
+            insertarUsuario(usuario);
+            System.out.println("Registro completado.");
+        }
     }
 
     public void registrarDepartamento(String nombre, String descripcion, String correo, String extension) {
         Departamento departamento = new Departamento(nombre, descripcion, correo, extension);
-        insertarDepartamento(departamento);
+        if (estaRepetidoDepartamento(departamento)) {
+            System.out.println("""
+                            
+                            Registro no completado.\
+                            
+                            El departamento ingresado ya se encuentra registrado.\
+                            
+                            Intente de nuevo con un nombre de departamento distinto.""");
+        } else {
+            insertarDepartamento(departamento);
+            System.out.println("Registro completado.");
+        }
     }
 
     public void registrarTicket(String asunto, String descripcion, String estado, String usuario, String departamento) {
@@ -49,32 +71,54 @@ public class Database {
     }
 
     public void imprimirListaUsuarios() {
-        if(!datosUsuario.isEmpty()) {
-            for (Object o : datosUsuario) {
-                System.out.println(o);
-            }
-        }else{
+        if (datosUsuario.isEmpty()) {
             System.out.println("No hay usuarios registrados.");
+        } else {
+            for (Usuario u : datosUsuario) {
+                System.out.println(u);
+            }
         }
     }
 
     public void imprimirListaDepartamentos() {
-        if(!datosDepartamento.isEmpty()) {
-            for (Object o : datosDepartamento) {
-                System.out.println(o);
-            }
-        }else{
+        if (datosDepartamento.isEmpty()) {
             System.out.println("No hay departamentos registrados.");
+        } else {
+            for (Departamento d : datosDepartamento) {
+                System.out.println(d);
+            }
         }
     }
 
     public void imprimirListaTickets() {
-        if(!datosTicket.isEmpty()) {
+        if (datosTicket.isEmpty()) {
+            System.out.println("No hay tickets registrados.");
+        } else {
             for (Object o : datosTicket) {
                 System.out.println(o);
             }
-        }else{
-            System.out.println("No hay tickets registrados.");
         }
+    }
+
+    public boolean estaRepetidoUsuario(Usuario usuario) {
+        if (!datosUsuario.isEmpty()) {
+            for (Usuario u : datosUsuario) {
+                if (u.equals(usuario)) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    public boolean estaRepetidoDepartamento(Departamento departamento) {
+        if (!datosDepartamento.isEmpty()) {
+            for (Departamento d : datosDepartamento) {
+                if (d.equals(departamento)) {
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 }
