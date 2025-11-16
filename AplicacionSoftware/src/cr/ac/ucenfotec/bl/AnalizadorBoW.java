@@ -9,7 +9,7 @@ public class AnalizadorBoW {
     /**
      * Ejecuta el análisis Bag of Words sobre la descripción del ticket
      * usando los diccionarios técnico y emocional. Retorna emociones,
-     * categorías y palabras detonantes detectadas.
+     * categorías y palabras detonantes detectadas;
      */
 
     public static ResultadoAnalisis analizarDescripcion(

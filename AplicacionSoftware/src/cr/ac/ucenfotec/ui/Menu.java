@@ -114,7 +114,7 @@ public class Menu {
                 break;
 
             case "7":
-                System.out.println("\nSaliendo");
+                System.out.println("\nCerrando el programa...");
                 estaCorriendo = false;
                 break;
 
