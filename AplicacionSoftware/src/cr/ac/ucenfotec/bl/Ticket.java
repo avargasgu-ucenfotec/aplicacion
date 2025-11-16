@@ -27,6 +27,14 @@ public class Ticket {
         this.estado = "nuevo";
     }
 
+    public Ticket(String asunto, String descripcion, Usuario usuario, Departamento departamento) {
+        this.asunto = asunto;
+        this.descripcion = descripcion;
+        this.usuario = usuario;
+        this.departamento = departamento;
+        this.estado = "nuevo";
+    }
+
     //Getter
     public String getAsunto() {
         return asunto;

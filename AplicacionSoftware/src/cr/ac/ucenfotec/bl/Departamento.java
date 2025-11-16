@@ -2,16 +2,20 @@ package cr.ac.ucenfotec.bl;
 
 public class Departamento {
 
-    //Clase "Departamento" que representa un departamento que gestiona un ticket.
+    /**
+     * Representa un departamento institucional que puede gestionar tickets.
+     * Incluye información básica como nombre, funciones, contacto y extensión.
+     */
 
-    //Atributos
-    private String nombre;      //Nombre del departamento.
-    private String descripcion; //Descripción breve de las funciones o alcance del departamento.
-    private String correo;      //Correo electrónico del departamento.
-    private String extension;   //Extensión telefónica del departamento.
+    //Atributos principales del departamento
+    private String nombre;
+    private String descripcion;
+    private String correo;
+    private String extension;
 
-    //Métodos
-    //Constructor
+    /**
+     * Constructor completo para registrar departamentos con toda su información.
+     */
     public Departamento(String nombre, String descripcion, String correo, String extension) {
         this.nombre = nombre;
         this.descripcion = descripcion;
@@ -19,12 +23,15 @@ public class Departamento {
         this.extension = extension;
     }
 
+    /**
+     * Constructor alternativo usado cuando solo se requiere nombre y descripción.
+     */
     public Departamento(String nombre, String descripcion) {
         this.nombre = nombre;
         this.descripcion = descripcion;
     }
 
-    //Getter
+    //Getters
     public String getNombre() {
         return nombre;
     }
@@ -41,7 +48,7 @@ public class Departamento {
         return extension;
     }
 
-    //Setter
+    //Setters
     public void setNombre(String nuevoNombre) {
         this.nombre = nuevoNombre;
     }
@@ -58,7 +65,6 @@ public class Departamento {
         this.extension = nuevoExtension;
     }
 
-    //toString()
     public String toString() {
         return "Nombre: " + nombre +
                 "\nDescripción: " + descripcion +
@@ -67,7 +73,6 @@ public class Departamento {
                 "\n";
     }
 
-    //equals()
     public boolean equals(Departamento departamento) {
         return(nombre.equals(departamento.nombre));
     }
