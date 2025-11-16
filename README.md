@@ -6,7 +6,7 @@
 4. Gestionar los diccionarios dinámicos desde la aplicación.
 5. Garantizar la seguridad, persistencia y buenas prácticas de la arquitectura.
 ### Requerimientos funcionales
--   [ ] El sistema no debe permitir usuarios duplicados.
+-   [ X ] El sistema no debe permitir usuarios duplicados.
 -   [ ] El sistema no debe permitir departamentos duplicados.
 -   [ ] El sistema permite registrar tickets con:
     -   [ ] Asunto
